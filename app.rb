@@ -10,8 +10,8 @@ set :database, "sqlite3:blogdb.squlite3"
 
 enable :sessions
 
-get '/sign_in' do
-	erb :sign_in
+get '/sign_in' do 
+	erb :sign_in, :layout => false 
 end
 
 post '/sign_in' do
@@ -24,6 +24,12 @@ post '/sign_in' do
 		flash[:notice] = "You're username or password doesn't match our records, please try again"
 	end
 	redirect '/profile'
+end
+
+post '/sign_up' do
+	@user1 = User.new(fname: params[:fname], lname: params[:lname],username: params[:username],password: params[:password])
+	@user1.save
+	redirect'/profile'
 end
 
 get '/profile' do
@@ -55,6 +61,18 @@ end
 get '/logout' do
 	session.clear
 	redirect '/sign_in'
+end
+
+get '/' do
+	redirect '/sign_in'
+end
+
+get '/account' do
+	erb :account
+end
+
+get '/users' do
+	erb :users
 end
 
 def current_user
