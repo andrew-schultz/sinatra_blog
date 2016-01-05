@@ -7,7 +7,7 @@
 			<% @post.each do |post| %>
 				<div>
 					<p class="nm"><strong><%= User.find(post.user_id).username %></strong></p>
-					<p><u><%= post.title %></u></p>
+					<p class="underline"><%= post.title %></p>
 					<p><%= post.body %></p>
 				</div>
 			<% end %>
