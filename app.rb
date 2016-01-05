@@ -16,12 +16,8 @@ def current_user
 	end
 end
 
-get '/' do
-
-end
-
-get '/sign_in' do
-	erb :sign_in
+get '/sign_in' do 
+	erb :sign_in, :layout => false 
 end
 
 post '/sign_in' do
@@ -35,6 +31,12 @@ post '/sign_in' do
 	end
 
 	redirect '/profile'
+end
+
+post '/sign_up' do
+	@user1 = User.new(fname: params[:fname], lname: params[:lname],username: params[:username],password: params[:password])
+	@user1.save
+	redirect'/profile'
 end
 
 get '/profile' do
@@ -77,3 +79,10 @@ get '/logout' do
 	redirect '/sign_in'
 end
 
+get '/' do
+	redirect '/sign_in'
+end
+
+get '/users' do
+	erb :users
+end
