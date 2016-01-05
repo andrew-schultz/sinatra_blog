@@ -1,0 +1,31 @@
+<div id="prof">
+	<h1 id="pH">
+		Welcome, <%= @user.fname %> <%= @user.lname %>
+	</h1>
+	<div id="pp">
+		<div class="ppi">
+			<% @post.each do |post| %>
+				<div>
+					<p class="nm"><strong><%= User.find(post.user_id).username %></strong></p>
+					<p><u><%= post.title %></u></p>
+					<p><%= post.body %></p>
+				</div>
+			<% end %>
+		</div>
+	</div>
+	<div id="newpost">
+		<h2>
+			A post goes here
+		</h2>
+		<form method="POST" action="/profile" id ="npost">
+			<label for="ptitle">Title</label>
+			<input type="text" name="ptitle" id="postit">
+			<br>
+			<textarea id="ta" rows="7" cols="50" name="newpost" form="npost"></textarea>
+			<br>
+			<input type="submit" id="postbut">
+		</form>
+	</div>
+
+
+</div>
