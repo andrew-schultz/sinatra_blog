@@ -1,0 +1,43 @@
+<div id="account">
+	<div id="acdetails">
+		<h1>Account Details</h1>
+		<h5 class="subtext">View and Change your Account Settings</h5>
+
+		<form method="POST" action="/account" id="acpost">
+			<label for="fname">First Name:</label>
+			<input type="text" name="fname" value= <%= @user.fname %> >
+			<br>
+			<br>
+			<label for="lname">Last Name:</label>
+			<input type="text" name="lname" value= <%= @user.lname %> >
+			<br>
+			<br>
+			<label for="username">Username:</label>
+			<input type="text" name="username" value= <%= @user.username %> >
+			<br>
+			<br>
+			<label for="password">Password:</label>
+			<input type="password" name="password" value= <%= @user.password %> >
+			<br>
+			<br>
+			<label for="bio">Bio:</label>
+			<textarea name="bio" rows="7" cols="50" form="acpost" ><%= @user.bio %></textarea>
+			<br>
+			<br>
+			<input type="submit">
+
+		</form>
+
+
+
+	</div>
+	<div id="acposts">
+		<h1>Your Posts</h1>
+		<% @posts.each do |post| %>
+			<div class="acpostsi">
+				<p id="nm" class="underline"><%= post.title %></p>
+				<p><%= post.body %></p>
+			</div>
+		<% end %>
+	</div>
+<div>

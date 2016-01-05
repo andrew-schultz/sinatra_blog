@@ -2,6 +2,10 @@ body {
 	font-family: 'Helvetica';
 }
 
+.underline {
+	text-decoration: underline;
+}
+
 #prof {
 	width: 100%;
 	background-color: #f2f2f2;
@@ -31,7 +35,7 @@ body {
 	margin: 0
 }
 
-.nm {
+#nm {
 	font-size: 18px;
 }
 
@@ -56,6 +60,36 @@ body {
 
 #ta {
 	width: 100%;
+}
+
+#acdetails {
+	float: left;
+}
+
+#acdetails h5 {
+	margin-top: -20px;
+}
+
+#acposts {
+	width: 40%;
+	float: right;
+}
+
+.acpostsi {
+	border: 1px solid black;
+}
+
+.acpostsi p {
+	padding-left: 10px;
+}
+
+#acpost input[type=text] {
+	font-size: 20px;
+	padding: 3px;
+}
+
+#acpost textarea {
+	font-size: 15px;
 }
 
 
