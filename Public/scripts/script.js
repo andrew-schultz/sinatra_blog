@@ -12,6 +12,11 @@ $(document).ready(function(){
 
 	$(".flashNotice").fadeOut(2500);
 
+	// $(".flashNotice2").hide(2500);
+	// $(".flashNotice2").fadeIn(2500);
+
+$('.flashNotice2').hide().fadeIn(2500)
+
 });
 
 
