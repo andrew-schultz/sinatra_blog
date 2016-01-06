@@ -77,6 +77,8 @@ end
 
 post '/edit' do
 	@post = Post.find_by(id: params[:id])
+	puts params[:body]
+	puts params[:title]
 	@post.update(body: params[:body], title: params[:title])
 	redirect '/account'
 end
@@ -91,5 +93,13 @@ get '/' do
 end
 
 get '/users' do
+	@users = User.all
 	erb :users
 end
+
+get '/user_profile/:id' do
+	@user = User.find_by(id: params[:id])
+	@post = Post.where(user_id: @user.id)
+	erb :user_profile
+end
+
