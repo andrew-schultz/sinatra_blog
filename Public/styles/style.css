@@ -4,13 +4,20 @@ body {
 	padding: 0;
 }
 
+a {
+	text-decoration: none;
+	color: #000000;
+}
+
 .underline {
 	text-decoration: underline;
 }
 
 #prof {
-	width: 100%;
+	width: 80%;
 	background-color: #f2f2f2;
+	margin: 0 auto;
+	height: 820px;
 }
 
 #pH {
@@ -29,9 +36,11 @@ body {
 	margin-left: 20%; 
 }
 
-.ppi div {
+.post {
 	border: 1px solid #000000;
 	padding: 5px;
+	margin: 3px;
+	background-color: #ffffff;
 }
 .ppi div p {
 	margin: 0
@@ -142,6 +151,16 @@ body {
 	background-color: #ffffff;
 }
 
+#account {
+	width: 80%;
+	margin: 0 auto;
+}
+
+#dpostbut {
+	float: right;
+	margin-top: -30px;
+}
+
 .accmodal {
 	display: none;
 	width: 100%;
@@ -150,6 +169,7 @@ body {
 	z-index: 100;
 	position: absolute;
 	top: 0%;
+	left: 0%;
 }
 
 #bedit {
@@ -204,4 +224,38 @@ body {
 	width: 80%;
 	margin: 0 auto;
 	border: 1px solid black;
+}
+
+#delete {
+	padding: 10px;
+	border: 3px solid #000000;
+	background-color: #ffffff;
+	margin-top: 20px;
+	font-weight: 700;
+	font-size: 18px;
+}
+
+#pedit label {
+	font-size: 16px;
+	font-weight: 700;
+}
+
+.p_edit_but {
+	padding: 5px;
+	border: 2px solid #000000;
+	background-color: #ffffff;
+	font-weight: 700;
+	font-size: 15px;
+}
+
+#acdetails label {
+	font-weight: 700;
+}
+
+#acdetails input {
+	border: 2.5px solid #000000;
+}
+
+textarea {
+	border: 2.5px solid #000000;
 }

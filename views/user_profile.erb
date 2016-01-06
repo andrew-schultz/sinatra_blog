@@ -1,7 +1,17 @@
-<h1>hello</h1>
-<p><%= @user.username %></p>
+<!-- <link rel="stylesheet" type="text/css" href="/styles/style.css">
+ -->
+<div>
+	<h1>hello</h1>
+	<p><%= @user.username %></p>
 
-<% @post.each do |p| %>
-	<p id="nm" class="underline"><%= p.title %><br>
-	<%= p.body %></p>
-<% end %>
+	<% @post.each do |p| %>
+		<p>
+			<span id="nm" class="underline">
+				<%= p.title %>
+			</span>
+			<br>
+			<%= p.body %>
+		</p>
+	<% end %>
+</div>
+
