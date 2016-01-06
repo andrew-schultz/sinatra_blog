@@ -77,6 +77,8 @@ end
 
 post '/edit' do
 	@post = Post.find_by(id: params[:id])
+	puts params[:body]
+	puts params[:title]
 	@post.update(body: params[:body], title: params[:title])
 	redirect '/account'
 end
