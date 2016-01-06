@@ -93,5 +93,13 @@ get '/' do
 end
 
 get '/users' do
+	@users = User.all
 	erb :users
 end
+
+get '/user_profile/:id' do
+	@user = User.find_by(id: params[:id])
+	@post = Post.where(user_id: @user.id)
+	erb :user_profile
+end
+

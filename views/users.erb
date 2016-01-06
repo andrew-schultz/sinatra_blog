@@ -1,0 +1,21 @@
+<div id="users_all">
+	<div id="user_wrapper">
+		<% @users.each do |u| %>
+			<div class="user_each">
+				<p class="user_name">
+					<a href="/user_profile/<%= u.id %>">
+						<%= u.username %>
+					</a>
+				</p>
+			</div>
+		<% end %>
+	<div>
+</div>
+
+<!-- 
+	click on a user, go to user_profile.erb
+		-user_profile.erb shows user info and user posts
+		-gets that info based off of @user.id
+		-@user.id is called from user object on users.erb
+
+ -->
