@@ -1,0 +1,13 @@
+$(document).ready(function(){
+// on click, have the selected post open up in a modal at the center of the page for editing
+	$('.acpostsi').on('click', function(){	
+		$(this).find('div').show().animate({
+			right: '38%',
+			'height': '125px',
+		});
+		$('.accmodal').fadeIn(200);
+	});
+
+
+
+});
