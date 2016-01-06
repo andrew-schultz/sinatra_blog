@@ -5,7 +5,7 @@
 	<div id="pp">
 		<div class="ppi">
 			<% @post.each do |post| %>
-				<div>
+				<div class="post">
 					<p class="nm"><strong><%= User.find(post.user_id).username %></strong></p>
 					<p class="underline"><%= post.title %></p>
 					<p><%= post.body %></p>
@@ -21,11 +21,9 @@
 			<label for="ptitle">Title</label>
 			<input type="text" name="ptitle" id="postit">
 			<br>
-			<textarea id="ta" rows="7" cols="50" name="newpost" form="npost"></textarea>
+			<textarea id="ta" rows="7" cols="30" name="newpost" form="npost"></textarea>
 			<br>
 			<input type="submit" id="postbut">
 		</form>
 	</div>
-
-
 </div>

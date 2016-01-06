@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="styles/style.css">
+	<link rel="stylesheet" type="text/css" href="/styles/style.css">
 </head>
 <body>
 	<% if flash[:notice] %>
@@ -10,12 +10,12 @@
 		</div>
 	<% end %>
 	<nav>
-	<ul id="navbar1">
-	<li id="navbar2"><a href="/profile">Home</a></li>
-	<li id="navbar2"><a href="/users">All Users</a></li>
-	<li id="navbar2"><a href="/account">Account Settings</a></li>
-	<li id="navbar2"><a href="/logout">Logout</a>
-		<ul></li>
+		<ul id="navbar1">
+			<li id="navbar2"><a href="/profile">Home</a></li>
+			<li id="navbar2"><a href="/users">All Users</a></li>
+			<li id="navbar2"><a href="/account">Account Settings</a></li>
+			<li id="navbar2"><a href="/logout">Logout</a></li>
+		</ul>
 	</nav>
 	<hr>
 	<%= yield %>

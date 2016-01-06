@@ -27,6 +27,10 @@
 			<br>
 			<input type="submit">
 		</form>
+		<form method="POST" action="/delete_account">
+			<input type="hidden" name="id" value= <%= @user.id %> >
+			<input type="submit" name="delete" id="delete" value="Delete Account">
+		</form>
 	</div>
 	<div id="acposts">
 		<h1>Your Posts</h1>
@@ -42,7 +46,11 @@
 						<br>
 						<label for="body">Body:</label>
 						<textarea name="body" rows="4" cols="50" ><%= p.body %></textarea>
-						<input type="submit">
+						<input type="submit" class="p_edit_but">
+					</form>
+					<form method="POST" action="/delete_post" id="dpostbut">
+						<input type="hidden" name="id" value= <%= p.id %> >
+						<input type="submit" name="delete_p" class="p_edit_but" value="Delete Post">
 					</form>
 				</div>
 				<p id="nm" class="underline"><%= p.title %></p>
