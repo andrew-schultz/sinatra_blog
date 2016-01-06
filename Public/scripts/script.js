@@ -1,0 +1,1 @@
+$(".flashNotice").fadeOut(2500);
