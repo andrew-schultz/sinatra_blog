@@ -97,6 +97,41 @@ body {
 	font-size: 15px;
 }
 
+#navbar1 {
+	list-style-type: none;
+	text-align: center;
+}
+
+#navbar2 {
+	display: inline;
+}
+
+#navbar2 a{
+	margin: 40px;
+}
+
+.flashNotice {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #F2F2F2;
+    padding: 5px;
+    width: 210px;
+    text-align: center;
+}
+
+#signforms {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+#signup {
+    max-width: 50%;
+    background-color: #F2F2F2;
+    padding: 20px;
+}
+
 .editpost {
 	position: absolute;
 	display: none;
@@ -122,6 +157,20 @@ body {
 	height: 50px; 
 }
 
+#signin {
+    max-width: 50%;
+    margin: 0 20px;
+    align-self: flex-start;
+    background-color: #F2F2F2;
+    padding: 20px;
+}
 
+#siform > input {
+	display: block;
+	width: 250px
+}
 
-
+#siform2 > input {
+	display: block;
+	width: 250px
+}

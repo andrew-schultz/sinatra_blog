@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
 // on click, have the selected post open up in a modal at the center of the page for editing
 	$('.acpostsi').on('click', function(){	
@@ -9,5 +10,9 @@ $(document).ready(function(){
 	});
 
 
+	$(".flashNotice").fadeOut(2500);
 
 });
+
+
+

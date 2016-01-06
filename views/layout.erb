@@ -9,10 +9,15 @@
 			<%= flash[:notice] %>
 		</div>
 	<% end %>
-	<a href="/profile">Home</a>
-	<a href="/users">All Users</a>
-	<a href="/account">Account Settings</a>
-	<a href="/logout">Logout</a>
+	<nav>
+	<ul id="navbar1">
+	<li id="navbar2"><a href="/profile">Home</a></li>
+	<li id="navbar2"><a href="/users">All Users</a></li>
+	<li id="navbar2"><a href="/account">Account Settings</a></li>
+	<li id="navbar2"><a href="/logout">Logout</a>
+		<ul></li>
+	</nav>
+	<hr>
 	<%= yield %>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script type="text/javascript" src="scripts/script.js"></script>
