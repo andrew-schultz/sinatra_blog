@@ -1,0 +1,7 @@
+<h1>hello</h1>
+<p><%= @user.username %></p>
+
+<% @post.each do |p| %>
+	<p id="nm" class="underline"><%= p.title %><br>
+	<%= p.body %></p>
+<% end %>
