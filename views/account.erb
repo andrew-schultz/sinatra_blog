@@ -1,8 +1,9 @@
 <div id="account">
+	<div class="accmodal">
+	</div>
 	<div id="acdetails">
 		<h1>Account Details</h1>
-		<h5 class="subtext">View and Change your Account Settings</h5>
-
+		<h5 class="subtext, subtext1">View and Change your Account Settings</h5>
 		<form method="POST" action="/account" id="acpost">
 			<label for="fname">First Name:</label>
 			<input type="text" name="fname" value= <%= @user.fname %> >
@@ -25,18 +26,27 @@
 			<br>
 			<br>
 			<input type="submit">
-
 		</form>
-
-
-
 	</div>
 	<div id="acposts">
 		<h1>Your Posts</h1>
-		<% @posts.each do |post| %>
+		<h5 class="subtext, subtext1">Click a post to edit it's content</h5>
+		<% @posts.each do |p| %>
 			<div class="acpostsi">
-				<p id="nm" class="underline"><%= post.title %></p>
-				<p><%= post.body %></p>
+				<div class="editpost">
+					<form method="POST" action="/edit" id="pedit">
+						<input type="hidden" name="id" value= <%=p.id %> >
+						<label for="title">Title:</label>
+						<input type="text" name="title" value= <%= p.title %> >
+						<br>
+						<br>
+						<label for="body">Body:</label>
+						<textarea name="body" rows="4" cols="50" form="pedit" ><%= p.body %></textarea>
+						<input type="submit">
+					</form>
+				</div>
+				<p id="nm" class="underline"><%= p.title %></p>
+				<p><%= p.body %></p>
 			</div>
 		<% end %>
 	</div>

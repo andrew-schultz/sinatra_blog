@@ -54,7 +54,7 @@ post '/profile' do
 	#set an instance variable equal to the new post that is created by passing the parameters from the form
 	@post = Post.new(title: params[:ptitle], body: params[:newpost], user_id: current_user.id)
 	#use an if statement to utitlize the validation method (in method.rb)
-	#the !@post.save serves too purposes, it saves the post and runs the if statement to alert the user if the 
+	#the !@post.save serves two purposes, it saves the post and runs the if statement to alert the user if the 
 	#post was too long. It doesn't save if the post was too long/if the validation fails
 	#it's part of the evaluation that active record does
 	if !@post.save
@@ -72,6 +72,13 @@ end
 post '/account' do
 	@user = current_user
 	@user.update(fname: params[:fname], lname: params[:lname], username: params[:username], password: params[:password], bio: params[:bio])
+	redirect '/account'
+end
+
+post '/edit' do
+	@post = Post.find_by(id: params[:id])
+	@post.update(body: params[:body], title: params[:title])
+	redirect '/account'
 end
 
 get '/logout' do
