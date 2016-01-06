@@ -35,7 +35,10 @@ end
 
 post '/sign_up' do
 	@user1 = User.new(fname: params[:fname], lname: params[:lname],username: params[:username],password: params[:password])
-	@user1.save
+	# @user1.save
+	if @user1.save
+		flash[:notice] = "You've successfully created your account, please sign in."
+	end	
 	redirect'/profile'
 end
 
