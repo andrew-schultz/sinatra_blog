@@ -1,36 +1,38 @@
 <link rel="stylesheet" type="text/css" href="styles/style.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script type="text/javascript" src="scripts/script.js"></script>
-<% if flash[:notice] %>
+	<% if flash[:notice] %>
 		<div class="flashNotice2">
 			<%= flash[:notice] %>
 		</div>
 	<% end %>
 <div id="signforms">		
-<div id="signin">
-	<h1>Sign In</h1>
-	<form method="POST" action="/sign_in" id="siform">
-		<label for="username">Username</label>
-		<input type="text" name="username" class="sii">
-		<label for="password">Password</label>
-		<input type="password" name="password" class="sii"><br>
-		<input type="submit">
-	</form>
-</div>
+	<div id="signin">
+		<h1>Sign In</h1>
+		<form method="POST" action="/sign_in" id="siform">
+			<label for="username">Username</label>
+			<input type="text" name="username" class="sii">
+			<label for="password">Password</label>
+			<input type="password" name="password" class="sii">
+			<br>
+			<input type="submit">
+		</form>
+	</div>
 
-<div id="signup">
-<h1>Sign Up</h1>
-<form method="POST" action="/sign_up" id="siform2">
-<label for="firstname">First Name</label>
-<input type="text" name="fname">
-<label for="lastname">Last Name</label>
-<input type="text" name="lname">
-<label for="username">Username</label>
-<input type="text" name="username" class="sii">
-<label for="password">Password</label>
-<input type="password" name="password" class="sii"><br>
-<input type="submit">	
-</form>
-</div>
+	<div id="signup">
+		<h1>Sign Up</h1>
+		<form method="POST" action="/sign_up" id="siform2">
+			<label for="firstname">First Name</label>
+			<input type="text" name="fname">
+			<label for="lastname">Last Name</label>
+			<input type="text" name="lname">
+			<label for="username">Username</label>
+			<input type="text" name="username" class="sii">
+			<label for="password">Password</label>
+			<input type="password" name="password" class="sii">
+			<br>
+			<input type="submit">	
+		</form>
+	</div>
 
 </div>

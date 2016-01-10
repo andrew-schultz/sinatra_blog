@@ -55,7 +55,7 @@ end
 post '/profile' do
 	puts params.inspect
 	#set an instance variable equal to the new post that is created by passing the parameters from the form
-	@post = Post.new(title: params[:ptitle], body: params[:newpost], user_id: current_user.id)
+	@post = Post.new(title: params[:ptitle], body: params[:postnew], user_id: current_user.id)
 	#use an if statement to utitlize the validation method (in method.rb)
 	#the !@post.save serves two purposes, it saves the post and runs the if statement to alert the user if the 
 	#post was too long. It doesn't save if the post was too long/if the validation fails

@@ -1,13 +1,13 @@
 <div id="users_all">
 	<div id="user_wrapper">
 		<% @users.each do |u| %>
-			<div class="user_each">
-				<p class="user_name">
-					<a href="/user_profile/<%= u.id %>">
+			<a href="/user_profile/<%= u.id %>">
+				<div class="user_each">
+					<p class="user_name">
 						<%= u.username %>
-					</a>
-				</p>
-			</div>
+					</p>
+				</div>
+			</a>
 		<% end %>
 	<div>
 </div>
