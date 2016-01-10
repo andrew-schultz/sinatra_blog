@@ -127,6 +127,10 @@ hr {
 	font-size: 20px;
 	background-color: #EAB59D;
 }
+nav {
+	background-color: #ffffff;
+	padding-top: 1px;
+}
 
 #navbar1 {
 	list-style-type: none;
