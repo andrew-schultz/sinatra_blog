@@ -2,6 +2,7 @@ body {
 	font-family: 'Helvetica';
 	margin: 0;
 	padding: 0;
+	background-color: #f2f2f2;
 }
 
 a {
@@ -104,6 +105,10 @@ a {
 
 #acpost textarea {
 	font-size: 15px;
+}
+nav {
+	background-color: #ffffff;
+	padding-top: 1px;
 }
 
 #navbar1 {
