@@ -2,6 +2,7 @@ body {
 	font-family: 'Helvetica';
 	margin: 0;
 	padding: 0;
+	background-color: #EAB59D;
 }
 
 a {
@@ -9,15 +10,39 @@ a {
 	color: #000000;
 }
 
-.underline {
-	text-decoration: underline;
+nav {
+	background-color: #ffffff;
+	padding-top: 1px;
+	padding-bottom: 1px;
 }
 
-#prof {
-	width: 80%;
-	background-color: #f2f2f2;
-	margin: 0 auto;
-	height: 820px;
+hr {
+	margin-top: 0px;
+}
+
+.button {
+	background-color: #EAB59D;
+	font-weight: 700;
+	border: 2px solid #000000;
+	padding: 5px;
+	font-size: 15px;
+}
+
+.ubutton {
+	float: right;
+	clear: both;
+	margin-right: 90px;
+	margin-top: 8px;
+}
+
+#password_input {
+	padding: 5px;
+	font-size: 15px;
+	width: ;
+}
+
+.underline {
+	font-weight: 700;
 }
 
 #pH {
@@ -25,85 +50,82 @@ a {
 	width: 30%;
 }
 
-#pp {
-	width: 30%;
-	float: left;
-}
-
-.ppi {
-	border: 1px solid #000000;
-	margin-top: 10px;
-	margin-left: 20%; 
-}
-
-.post {
-	border: 1px solid #000000;
-	padding: 5px;
-	margin: 3px;
-	background-color: #ffffff;
-}
-.ppi div p {
-	margin: 0
-}
-
 #nm {
-	font-size: 18px;
+	font-size: 20px;
 }
 
 #newpost {
-	width: 45%;
-	float: right;
-	background-color: #f2f2f2;
-	border: 1px solid black;
+	width: 35%;
+	float: left;
 	margin-right: 6%;
 	margin-top: 10px;
 }
 
-#newpost h2 {
-	text-align: center;
+#hide {
+	color: #EAB59D;
 }
 
 #npost {
 	margin: 0 auto;
-	border: 1px solid black;
-
 }
 
-#ta {
-	width: 100%;
+#npost label {
+	font-weight: 700;
+	font-size: 18px;
 }
+
+#npost input[type=text] {
+	font-size: 20px;
+	padding: 3px;
+	background-color: #EAB59D; 
+}
+
+#npost_text {
+	font-size: 20px;
+}
+
 
 #acdetails {
 	float: left;
-	margin-left: 6%;
+	margin-left: 10%;
 	width: 45%;
 }
 
-.subtext1 {
+.subtext {
 	margin-top: -20px;
 }
 
 #acposts {
 	width: 30%;
 	float: right;
-	margin-right: 6%;
+	margin-right: 10%;
+}
+
+.acheader {
+	padding-left: 2%;
 }
 
 .acpostsi {
-	border: 1px solid black;
+	border: 2px solid #000000;
+	margin: 5px;
 }
 
 .acpostsi p {
 	padding-left: 10px;
+	padding-right: 10px;
+	font-weight: 500;
+	font-size: 19px;
 }
 
 #acpost input[type=text] {
 	font-size: 20px;
 	padding: 3px;
+	background-color: #EAB59D; 
 }
 
 #acpost textarea {
-	font-size: 15px;
+	font-size: 20px;
+	background-color: #EAB59D;
 }
 
 #navbar1 {
@@ -117,6 +139,9 @@ a {
 
 #navbar2 a{
 	margin: 40px;
+	font-weight: 700;
+	font-size: 20px;
+	/*color: #ffffff;*/
 }
 
 .flashNotice {
@@ -143,20 +168,25 @@ a {
     margin-top: 50px;
 }
 
+#signforms input {
+	border: 2px solid #d9d9d9;
+}
+
 #signup {
     max-width: 50%;
     background-color: #F2F2F2;
     padding: 20px;
+    border: 2px solid #ffffff;
 }
 
 .editpost {
 	position: absolute;
 	display: none;
-	width: 400px;
+	width: 340px;
 	height: 75px;
-	border: 3px solid; 
+	border: 3px solid #000000; 
 	z-index: 1000;
-	background-color: #ffffff;
+	background-color: #EAB59D;
 }
 
 #account {
@@ -164,9 +194,15 @@ a {
 	margin: 0 auto;
 }
 
+#postbut {
+	float: right;
+	clear: both;
+}
+
 #dpostbut {
 	float: right;
-	margin-top: -30px;
+	margin-top: -32px;
+	margin-right: 13px;
 }
 
 .accmodal {
@@ -191,6 +227,7 @@ a {
     align-self: flex-start;
     background-color: #F2F2F2;
     padding: 20px;
+    border: 2px solid #ffffff;
 }
 
 #siform > input {
@@ -214,7 +251,7 @@ a {
 	min-width: 200px;
 	height: 200px;
 	display: inline-block;
-	border: 1px solid black;
+	border: 2px solid #000000;
 	margin: 5px;
 	padding: 5px;
 	position: relative;
@@ -231,39 +268,65 @@ a {
 #user_wrapper {
 	width: 80%;
 	margin: 0 auto;
-	border: 1px solid black;
 }
 
 #delete {
 	padding: 10px;
 	border: 3px solid #000000;
-	background-color: #ffffff;
-	margin-top: 20px;
+	background-color: #EAB59D;
+	margin-top: 30px;
 	font-weight: 700;
 	font-size: 18px;
+	float: right;
+	clear: both;
+	margin-right: 90px;
 }
 
-#pedit label {
-	font-size: 16px;
+#post_edit label {
+	font-size: 20px;
 	font-weight: 700;
+	padding-left: 12px;
 }
 
-.p_edit_but {
-	padding: 5px;
+#post_edit_submit {
+	margin-left: 12px;
+	margin-top: 12px;
+}
+
+#post_edit_input {
 	border: 2px solid #000000;
-	background-color: #ffffff;
-	font-weight: 700;
+	font-size: 18px;
+	margin-top: 10px;
+	margin-left: 75px;
+}
+
+#post_edit textarea {
+	margin-left: 27px;
 	font-size: 15px;
+}
+
+.ind_user_account_label {
+	font-weight: 700;
+	font-size: 20px;
 }
 
 #acdetails label {
 	font-weight: 700;
+	font-size: 20px;
 }
 
 #acdetails input {
-	border: 2.5px solid #000000;
+	border: 2px solid #000000;
+	margin-bottom: 1px;
+}
+
+.user_input {
+	float: right;
+	margin-right: 90px;
+	background-color: #EAB59D;
 }
 
 textarea {
 	border: 2.5px solid #000000;
+	background-color: #EAB59D;
 }

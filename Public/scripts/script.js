@@ -4,9 +4,15 @@ $(document).ready(function(){
 	$('.acpostsi').on('click', function(){	
 		$(this).find('div').show().animate({
 			right: '38%',
-			'height': '150px',
+			'height': '215px',
 		});
 		$('.accmodal').fadeIn(200);
+	});
+
+	$('.navbar2').hover(function(){
+		$(this).css('color', 'grey');
+		}, function(){
+		$(this).css('color', 'black');
 	});
 
 

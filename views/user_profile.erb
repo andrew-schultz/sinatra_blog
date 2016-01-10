@@ -1,17 +1,46 @@
-<!-- <link rel="stylesheet" type="text/css" href="/styles/style.css">
- -->
-<div>
-	<h1>hello</h1>
-	<p><%= @user.username %></p>
+<div id="account">
+	<div id="acdetails">
+		<h1><%= @user.username %>'s Profile</h1>
+		<h5 class="subtext">User since <%= @user.created_at %></h5>
+		<div id="ind_user_account">
+			
+			<div class="user_each">
+			</div>
+			<p>
+				<span class="ind_user_account_label">
+					First Name
+				</span>
+				<%= @user.fname %>
+			</p>
+			<p>
+				<span class="ind_user_account_label">
+					Last Name
+				</span>
+				<%= @user.lname %>
+			</p>
+			<p>
+				<span class="ind_user_account_label">
+					Bio
+				</span>
+				<%= @user.bio %>
+			</p>
 
-	<% @post.each do |p| %>
-		<p>
-			<span id="nm" class="underline">
-				<%= p.title %>
-			</span>
-			<br>
-			<%= p.body %>
-		</p>
-	<% end %>
+		</div>
+	</div>
+	<div id="acposts">
+			<h1 class="acheader"><%= @user.username %>'s Posts</h1>
+			<h5 class="subtext acheader" id="hide">thisishidden</h5>
+			<% @post.each do |p| %>
+				<div class="acpostsi">	
+					<p>
+						<span id="nm" class="underline">
+							<%= p.title %>
+						</span>
+						<br>
+						<%= p.body %>
+					</p>
+				</div>
+			<% end %>
+	</div>
 </div>
 

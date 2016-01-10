@@ -3,29 +3,29 @@
 	</div>
 	<div id="acdetails">
 		<h1>Account Details</h1>
-		<h5 class="subtext, subtext1">View and Change your Account Settings</h5>
+		<h5 class="subtext">View and Change your Account Settings</h5>
 		<form method="POST" action="/account" id="acpost">
-			<label for="fname">First Name:</label>
-			<input type="text" name="fname" value= <%= @user.fname %> >
+			<label for="fname">First Name</label>
+			<input type="text" name="fname" class="user_input" value= <%= @user.fname %> >
 			<br>
 			<br>
-			<label for="lname">Last Name:</label>
-			<input type="text" name="lname" value= <%= @user.lname %> >
+			<label for="lname">Last Name</label>
+			<input type="text" name="lname" class="user_input" value= <%= @user.lname %> >
 			<br>
 			<br>
-			<label for="username">Username:</label>
-			<input type="text" name="username" value= <%= @user.username %> >
+			<label for="username">Username</label>
+			<input type="text" name="username" class="user_input" value= <%= @user.username %> >
 			<br>
 			<br>
-			<label for="password">Password:</label>
-			<input type="password" name="password" value= <%= @user.password %> >
+			<label for="password">Password</label>
+			<input type="password" name="password" class="user_input" id="password_input" value= <%= @user.password %> >
 			<br>
 			<br>
-			<label for="bio">Bio:</label>
-			<textarea name="bio" rows="7" cols="50" form="acpost" ><%= @user.bio %></textarea>
+			<label for="bio">Bio</label>
+			<textarea name="bio" rows="4" cols="30" class="user_input" form="acpost" ><%= @user.bio %></textarea>
 			<br>
 			<br>
-			<input type="submit">
+			<input type="submit" class="ubutton button">
 		</form>
 		<form method="POST" action="/delete_account">
 			<input type="hidden" name="id" value= <%= @user.id %> >
@@ -33,28 +33,33 @@
 		</form>
 	</div>
 	<div id="acposts">
-		<h1>Your Posts</h1>
-		<h5 class="subtext, subtext1">Click a post to edit it's content</h5>
+		<h1 class="acheader">Your Posts</h1>
+		<h5 class="subtext acheader">Click a post to edit it's content</h5>
 		<% @posts.each do |p| %>
 			<div class="acpostsi">
 				<div class="editpost">
-					<form method="POST" action="/edit" id="pedit">
+					<form method="POST" action="/edit" id="post_edit">
 						<input type="hidden" name="id" value= <%=p.id %> >
-						<label for="title">Title:</label>
-						<input type="text" name="title" value= <%= p.title %> >
+						<label for="title">Title</label>
+						<input type="text" name="title" id="post_edit_input" value= <%= p.title %> >
 						<br>
 						<br>
-						<label for="body">Body:</label>
-						<textarea name="body" rows="4" cols="50" ><%= p.body %></textarea>
-						<input type="submit" class="p_edit_but">
+						<label for="body">Body</label>
+						<textarea name="body" rows="4" cols="35" ><%= p.body %></textarea>
+						<input type="submit" id="post_edit_submit" class="button">
 					</form>
 					<form method="POST" action="/delete_post" id="dpostbut">
 						<input type="hidden" name="id" value= <%= p.id %> >
-						<input type="submit" name="delete_p" class="p_edit_but" value="Delete Post">
+						<input type="submit" name="delete_p" class="button" value="Delete Post">
 					</form>
 				</div>
-				<p id="nm" class="underline"><%= p.title %></p>
-				<p><%= p.body %></p>
+				<p id="nm">
+					<span class="underline">
+						<%= p.title %>
+					</span>
+					<br>
+					<%= p.body %>
+				</p>
 			</div>
 		<% end %>
 	</div>

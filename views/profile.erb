@@ -1,29 +1,40 @@
-<div id="prof">
+<div id="account">
 	<h1 id="pH">
 		Welcome, <%= @user.fname %> <%= @user.lname %>
 	</h1>
-	<div id="pp">
-		<div class="ppi">
-			<% @post.each do |post| %>
-				<div class="post">
-					<p class="nm"><strong><%= User.find(post.user_id).username %></strong></p>
-					<p class="underline"><%= post.title %></p>
-					<p><%= post.body %></p>
-				</div>
-			<% end %>
-		</div>
-	</div>
-	<div id="newpost">
-		<h2>
-			A post goes here
-		</h2>
+	<div id="acdetails">
+		<h1>
+			New Post
+		</h1>
+		<h5 class="subtext">
+			Write a new post here
+		</h5>
 		<form method="POST" action="/profile" id ="npost">
 			<label for="ptitle">Title</label>
-			<input type="text" name="ptitle" id="postit">
+			<input type="text" name="ptitle" id="postit" class="user_input">
 			<br>
-			<textarea id="ta" rows="7" cols="30" name="newpost" form="npost"></textarea>
+			<label for="postnew">Body</label>
+			<textarea rows="4" cols="28" name="postnew" id="npost_text" class="user_input" form="npost"></textarea>
 			<br>
-			<input type="submit" id="postbut">
+			<input type="submit" id="postbut" class="ubutton button">
 		</form>
+	</div>
+	<div id="acposts">
+		<h1 class="acheader">
+			Feed
+		</h1>
+		<h5 class="subtext acheader">
+			10 most recent Posts
+		</h5>
+		<% @post.each do |post| %>
+			<div class="acpostsi">
+				<p class="nm"><%= User.find(post.user_id).username %></p>
+				<p>
+					<span class="underline"><%= post.title %></span>
+					<br>
+					<%= post.body %>
+				</p>
+			</div>
+		<% end %>
 	</div>
 </div>
