@@ -2,7 +2,7 @@
 	<div id="user_wrapper">
 		<% @users.each do |u| %>
 			<a href="/user_profile/<%= u.id %>">
-				<div class="user_each">
+				<div class="user_each u<%=u.id %>">
 					<p class="user_name">
 						<%= u.username %>
 					</p>

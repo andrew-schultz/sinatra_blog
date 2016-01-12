@@ -29,10 +29,10 @@ hr {
 }
 
 .ubutton {
-	float: right;
+	/*float: right;
 	clear: both;
 	margin-right: 90px;
-	margin-top: 8px;
+	margin-top: 8px;*/
 }
 
 #password_input {
@@ -47,7 +47,7 @@ hr {
 
 #pH {
 	margin: 0 auto;
-	width: 30%;
+	text-align: center;
 }
 
 #nm {
@@ -178,9 +178,9 @@ nav {
 
 #signup {
     max-width: 50%;
-    background-color: #F2F2F2;
+    /*background-color: #F2F2F2;*/
     padding: 20px;
-    border: 2px solid #ffffff;
+    border: 3px solid black;
 }
 
 .editpost {
@@ -199,7 +199,7 @@ nav {
 }
 
 #postbut {
-	float: right;
+	float: left;
 	clear: both;
 }
 
@@ -229,9 +229,9 @@ nav {
     max-width: 50%;
     margin: 0 20px;
     align-self: flex-start;
-    background-color: #F2F2F2;
+    /*background-color: #F2F2F2;*/
     padding: 20px;
-    border: 2px solid #ffffff;
+    border: 3px solid black;
 }
 
 #siform > input {
@@ -245,8 +245,10 @@ nav {
 }
 
 #users_all {
-	width: 80%;
-	margin: 0 auto;
+	display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-left: 65px;
 }
 
 .user_each {
@@ -257,7 +259,7 @@ nav {
 	display: inline-block;
 	border: 2px solid #000000;
 	margin: 5px;
-	padding: 5px;
+	padding: 0px;
 	position: relative;
 }
 
@@ -267,11 +269,12 @@ nav {
 	margin: 0;
 	position: absolute;
 	bottom: 0;
+	color: white;
+	background-color: rgba(0,0,0,0.6); 
 }
 
 #user_wrapper {
-	width: 80%;
-	margin: 0 auto;
+	width: 850px;
 }
 
 #delete {
@@ -325,12 +328,34 @@ nav {
 }
 
 .user_input {
-	float: right;
+	/*float: right;*/
 	margin-right: 90px;
 	background-color: #EAB59D;
+	display: block;
 }
 
 textarea {
 	border: 2.5px solid #000000;
 	background-color: #EAB59D;
+}
+.user_each.u1 {
+    background: url("/images/u1.png") no-repeat center center;
+}
+.user_each.u2 {
+    background: url("/images/u2.png") no-repeat center center;
+}
+.user_each.u3 {
+    background: url("/images/u3.png") no-repeat center center;
+}
+.user_each.u4 {
+    background: url("/images/u4.png") no-repeat center center;
+}
+.user_each.u10 {
+    background: url("/images/u5.png") no-repeat center center;
+}
+.user_each.u13 {
+    background: url("/images/u6.png") no-repeat center center;
+}
+input#postit {
+    width: 290px;
 }
